@@ -4,7 +4,12 @@
 <% if @task.completed  %>
   <p>done</p>
   <% else %>
-  <p>need to work on it </p>
+  <p><input type="checkbox"> This task is not completed yet </p>
   <% end %>
 
+
+
+
+<%= link_to("Delete", task_path(@task), method: :delete) %> <br><br>
+<%= link_to("Edit my list", edit_task_path(@task)) %> <br><br>
 <%= link_to("Back to list", tasks_path) %>
